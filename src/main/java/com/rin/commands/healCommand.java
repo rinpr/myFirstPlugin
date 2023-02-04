@@ -6,11 +6,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 public class healCommand implements CommandExecutor {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (args.length == 0) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
@@ -21,7 +22,7 @@ public class healCommand implements CommandExecutor {
             }
         }    else {
             if (Bukkit.getPlayerExact(args[0]) !=null) {
-                Player player = (Player) Bukkit.getPlayerExact(args[0]);
+                Player player = Bukkit.getPlayerExact(args[0]);
                 assert player != null;
                 heal(player);
                 player.sendMessage(ChatColor.GREEN + "You've been healed!");

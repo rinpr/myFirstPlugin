@@ -74,7 +74,7 @@ public class readConfig {
         Set<String> keyList = listFiles(getGuiPath());
         String[] kl = new String[keyList.size()];
         int i = 0;
-;       for (String string : keyList) {
+       for (String string : keyList) {
             kl[i++] = string;
         }
         for (int j = 0; j < kl.length; j++) {

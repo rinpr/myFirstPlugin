@@ -10,18 +10,19 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.Objects;
 
 public class guiCommand implements CommandExecutor {
 
-    private Main main;
+    private final Main main;
     public guiCommand(Main main) {
         this.main = main;
     }
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         readConfig config = new readConfig(main);
         String[] arg = config.getGuiIdList();
         MakeGUI gui = new MakeGUI(main);
