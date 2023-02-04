@@ -1,0 +1,18 @@
+name: Rin
+version: '${project.version}'
+main: com.rin.Main
+api-version: 1.19
+authors: [ Rin ]
+commands:
+  heal:
+    description: No one's gonna die today!
+  repair:
+    description: ReUSE ReDUCE ReCYCLE
+  repairall:
+    description: Repair everything in inventory
+  fly:
+    description: Human's dream!
+  config:
+    description: Print something from configuration file
+  gui:
+    description: Create GUI

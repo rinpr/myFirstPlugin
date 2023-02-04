@@ -1,0 +1,10 @@
+name: "Rin"
+age: 3
+is_gay: false
+word_list:
+  - 'test'
+  - 'way'
+  - 'okay'
+Key:
+  key1: 'test'
+  key2: 'nodirt'
